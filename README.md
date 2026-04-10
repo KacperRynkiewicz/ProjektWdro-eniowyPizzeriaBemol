@@ -4,7 +4,7 @@ Kacper Rynkiewicz 81453
 Mateusz Tołodziecki 78665
 Rafał Bojarski 78210
 
-Dokumentacja Projektu: Pizzeria Bemol 
+Dokumentacja Projektu: Responsywna Platforma Internetowa restauracji oparta na React.js i Node.js z Interaktywnym Menu, Systemem Zamówień Online oraz Panelem Administracyjnym
 1. Cel Projektu 
 Stworzenie nowoczesnej, responsywnej witryny internetowej dla Pizzerii Bemol, umożliwiającej przeglądanie menu, składanie zamówień online oraz budowanie wizerunku marki poprzez integrację z mediami społecznościowymi. 
 2. Stack Technologiczny 
