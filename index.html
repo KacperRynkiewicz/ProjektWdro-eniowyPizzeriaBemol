@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bemol – Pizzeria</title>
+</head>
+
+<body>
+
+    <!-- NAWIGACJA -->
+    <nav>
+        <div>Bemol</div>
+        <ul>
+            <li><a href="#o-nas">O nas</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#rezerwacja">Rezerwacja</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <header id="hero">
+        <h1>Smak, który gra w harmonii</h1>
+        <p>Pizzeria Bemol – gdzie każdy składnik to nuta, a każda pizza to kompozycja stworzona z pasji i tradycji.</p>
+        <a href="#menu">Nasze menu</a>
+        <a href="#rezerwacja">Zarezerwuj stolik</a>
+    </header>
+
+    <main>
+
+        <!-- O NAS -->
+        <section id="o-nas">
+            <h2>Pizzeria z duszą muzycznego rzemiosła</h2>
+            <img src="restauracja.jpg" alt="Wnętrze restauracji Bemol" />
+            <p>Bemol to miejsce, gdzie pizza to sztuka. Inspirowani muzyką i tradycją neapolitańską, tworzymy pizze,
+                które brzmią jak dobrze skomponowana melodia – każdy składnik odgrywa swoją rolę.</p>
+            <p>Używamy mąki typu 00, pomidorów San Marzano i mozzarelli fior di latte. Nasze ciasto fermentuje przez 72
+                godziny, a piece opałowe grzeją do 450°C.</p>
+        </section>
+
+        <!-- MENU -->
+        <section id="menu">
+            <h2>Menu</h2>
+
+            <h3>Pizze klasyczne</h3>
+            <ul>
+                <li>
+                    <strong>Margherita</strong> – 32 zł
+                    <p>Sos pomidorowy, mozzarella fior di latte, świeża bazylia, oliwa extra vergine.</p>
+                </li>
+                <li>
+                    <strong>Diavola</strong> – 42 zł
+                    <p>Sos pomidorowy, mozzarella, salami piccante, papryczki chili.</p>
+                </li>
+                <li>
+                    <strong>Quattro Formaggi</strong> – 46 zł
+                    <p>Cztery rodzaje serów: mozzarella, gorgonzola, provolone, parmigiano.</p>
+                </li>
+            </ul>
+
+            <h3>Pizze premium</h3>
+            <ul>
+                <li>
+                    <strong>Bemol Signature</strong> – 64 zł
+                    <p>Krem truflowy, mozzarella bawola, prosciutto crudo, rukola, płatki parmezanu.</p>
+                </li>
+                <li>
+                    <strong>Tartufo Bianco</strong> – 58 zł
+                    <p>Biały sos truflowy, mozzarella, pieczarki portobello, tymianek.</p>
+                </li>
+            </ul>
+
+            <h3>Antipasti</h3>
+            <ul>
+                <li><strong>Bruschetta al pomodoro</strong> – 18 zł</li>
+                <li><strong>Talerz wędlin włoskich</strong> – 38 zł</li>
+                <li><strong>Burrata z pomidorami</strong> – 32 zł</li>
+            </ul>
+
+            <h3>Desery</h3>
+            <ul>
+                <li><strong>Tiramisu</strong> – 22 zł</li>
+                <li><strong>Panna cotta</strong> – 20 zł</li>
+                <li><strong>Gelato (3 gałki)</strong> – 18 zł</li>
+            </ul>
+
+            <h3>Napoje</h3>
+            <ul>
+                <li><strong>Woda mineralna 0,5 l</strong> – 8 zł</li>
+                <li><strong>Lemoniada domowa</strong> – 14 zł</li>
+                <li><strong>Wino do kieliszka</strong> – 22 zł</li>
+            </ul>
+        </section>
+
+        <!-- GALERIA -->
+        <section id="galeria">
+            <h2>Galeria</h2>
+            <img src="galeria-pizza.jpg" alt="Pizza z pieca opałowego" />
+            <img src="galeria-wnetrze.jpg" alt="Wnętrze restauracji" />
+            <img src="galeria-kuchnia.jpg" alt="Otwarta kuchnia" />
+            <img src="galeria-skladniki.jpg" alt="Świeże składniki" />
+            <img src="galeria-taras.jpg" alt="Taras letni" />
+        </section>
+
+        <!-- REZERWACJA -->
+        <section id="rezerwacja">
+            <h2>Rezerwacja stolika</h2>
+            <form action="/rezerwacja" method="POST">
+                <label for="imie">Imię i nazwisko</label>
+                <input type="text" id="imie" name="imie" placeholder="Jan Kowalski" required />
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="jan@email.pl" required />
+
+                <label for="tel">Telefon</label>
+                <input type="tel" id="tel" name="tel" placeholder="+48 000 000 000" required />
+
+                <label for="data">Data</label>
+                <input type="date" id="data" name="data" required />
+
+                <label for="godzina">Godzina</label>
+                <input type="time" id="godzina" name="godzina" required />
+
+                <label for="osoby">Liczba osób</label>
+                <select id="osoby" name="osoby">
+                    <option value="1">1 osoba</option>
+                    <option value="2">2 osoby</option>
+                    <option value="3">3–4 osoby</option>
+                    <option value="5">5–6 osób</option>
+                    <option value="7">7+ osób</option>
+                </select>
+
+                <label for="uwagi">Uwagi (opcjonalnie)</label>
+                <textarea id="uwagi" name="uwagi" placeholder="Alergie, okazje specjalne..."></textarea>
+
+                <button type="submit">Zarezerwuj stolik</button>
+            </form>
+        </section>
+
+        <!-- KONTAKT -->
+        <section id="kontakt">
+            <h2>Kontakt</h2>
+
+            <h3>Adres</h3>
+            <address>
+
+
+            </address>
+
+            <h3>Godziny otwarcia</h3>
+            <p>Poniedziałek – Czwartek: 12:00 – 22:00</p>
+            <p>Piątek – Sobota: 12:00 – 23:30</p>
+            <p>Niedziela: 13:00 – 21:00</p>
+
+            <h3>Dane kontaktowe</h3>
+            <p>Telefon: <a href="tel:+48581234567">+48 58 123 45 67</a></p>
+            <p>E-mail: <a href="mailto:kontakt@bemol.pl">kontakt@bemol.pl</a></p>
+            <p>Instagram: <a href="https://instagram.com/pizzeria.bemol" target="_blank">@pizzeria.bemol</a></p>
+        </section>
+
+    </main>
+
+    <!-- STOPKA -->
+    <footer>
+        <p>© 2025 Pizzeria Bemol. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+
+</html>
