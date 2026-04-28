@@ -1,173 +1,336 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bemol – Pizzeria</title>
+    <title>Pizzeria Bemol - Kartuzy</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet" />
 </head>
 
 <body>
-
-    <!-- NAWIGACJA -->
-    <nav>
-        <div>Bemol</div>
-        <ul>
-            <li><a href="#o-nas">O nas</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#rezerwacja">Rezerwacja</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
-    </nav>
-
-    <!-- HERO -->
-    <header id="hero">
-        <h1>Smak, który gra w harmonii</h1>
-        <p>Pizzeria Bemol – gdzie każdy składnik to nuta, a każda pizza to kompozycja stworzona z pasji i tradycji.</p>
-        <a href="#menu">Nasze menu</a>
-        <a href="#rezerwacja">Zarezerwuj stolik</a>
+    <header class="header">
+        <div class="container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">🍕</div>
+                <div>
+                    <h1>Nasza Pizza</h1>
+                    <p>Bemol - Kartuzy</p>
+                </div>
+            </a>
+            <nav>
+                <a href="#home">Strona Główna</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">O nas</a>
+                <a href="#contact">Kontakt</a>
+            </nav>
+            <button class="order-btn">Zamów Online</button>
+        </div>
     </header>
 
-    <main>
+    <section id="home" class="hero">
+        <div class="lights"></div>
+        <div class="container">
+            <div class="pizza-icon">🍕</div>
+            <h2>Pizzeria Bemol</h2>
+            <p class="subtitle">Autentyczna włoska pizza w sercu Kartuz</p>
+            <div class="promo-cards">
+                <div class="card">
+                    <h3>🍕 Promocja Dnia</h3>
+                    <p>Dowolna pizza 32cm - <span>19.00 zł</span></p>
+                </div>
+                <div class="card">
+                    <h3>⚡ Szybka Dostawa</h3>
+                    <p>Zamów i ciesz się smakiem!</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- O NAS -->
-        <section id="o-nas">
-            <h2>Pizzeria z duszą muzycznego rzemiosła</h2>
-            <img src="restauracja.jpg" alt="Wnętrze restauracji Bemol" />
-            <p>Bemol to miejsce, gdzie pizza to sztuka. Inspirowani muzyką i tradycją neapolitańską, tworzymy pizze,
-                które brzmią jak dobrze skomponowana melodia – każdy składnik odgrywa swoją rolę.</p>
-            <p>Używamy mąki typu 00, pomidorów San Marzano i mozzarelli fior di latte. Nasze ciasto fermentuje przez 72
-                godziny, a piece opałowe grzeją do 450°C.</p>
-        </section>
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Nasze Menu</h2>
 
-        <!-- MENU -->
-        <section id="menu">
-            <h2>Menu</h2>
+            <div class="category">
+                <h3>🍕 Pizze</h3>
+                <div class="items">
+                    <div class="item">
+                        <div>
+                            <span class="number">01.</span>
+                            <div>
+                                <h4>MARGHERITA</h4>
+                                <p>Sos pomidorowy, mozzarella</p>
+                            </div>
+                        </div>
+                        <div class="prices">
+                            <div><small>32cm</small><strong>18.00</strong></div>
+                            <div><small>42cm</small><strong>20.50</strong></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <span class="number">02.</span>
+                            <div>
+                                <h4>PROSCIUTTO</h4>
+                                <p>Sos pomidorowy, mozzarella, szynka</p>
+                            </div>
+                        </div>
+                        <div class="prices">
+                            <div><small>32cm</small><strong>19.00</strong></div>
+                            <div><small>42cm</small><strong>21.50</strong></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <span class="number">03.</span>
+                            <div>
+                                <h4>CAPRICCIOSA</h4>
+                                <p>Sos pomidorowy, mozzarella, szynka, pieczarki</p>
+                            </div>
+                        </div>
+                        <div class="prices">
+                            <div><small>32cm</small><strong>20.00</strong></div>
+                            <div><small>42cm</small><strong>22.50</strong></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <span class="number">04.</span>
+                            <div>
+                                <h4>SALAMI</h4>
+                                <p>Sos pomidorowy, mozzarella, salami</p>
+                            </div>
+                        </div>
+                        <div class="prices">
+                            <div><small>32cm</small><strong>19.00</strong></div>
+                            <div><small>42cm</small><strong>21.50</strong></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <span class="number">05.</span>
+                            <div>
+                                <h4>VEGETARIANA</h4>
+                                <p>Sos pomidorowy, mozzarella, papryka, cukinia, bakłażan</p>
+                            </div>
+                        </div>
+                        <div class="prices">
+                            <div><small>32cm</small><strong>20.00</strong></div>
+                            <div><small>42cm</small><strong>23.00</strong></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <span class="number">06.</span>
+                            <div>
+                                <h4>QUATTRO FORMAGGI</h4>
+                                <p>
+                                    Sos pomidorowy, mozzarella, gorgonzola, parmezan, ser kozi
+                                </p>
+                            </div>
+                        </div>
+                        <div class="prices">
+                            <div><small>32cm</small><strong>22.00</strong></div>
+                            <div><small>42cm</small><strong>25.00</strong></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <span class="number">07.</span>
+                            <div>
+                                <h4>DIAVOLA</h4>
+                                <p>
+                                    Sos pomidorowy, mozzarella, salami pikantne, papryczka chili
+                                </p>
+                            </div>
+                        </div>
+                        <div class="prices">
+                            <div><small>32cm</small><strong>21.00</strong></div>
+                            <div><small>42cm</small><strong>24.00</strong></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <span class="number">08.</span>
+                            <div>
+                                <h4>HAWAII</h4>
+                                <p>Sos pomidorowy, mozzarella, szynka, ananas</p>
+                            </div>
+                        </div>
+                        <div class="prices">
+                            <div><small>32cm</small><strong>19.50</strong></div>
+                            <div><small>42cm</small><strong>22.00</strong></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <span class="number">09.</span>
+                            <div>
+                                <h4>TONNO</h4>
+                                <p>Sos pomidorowy, mozzarella, tuńczyk, cebula</p>
+                            </div>
+                        </div>
+                        <div class="prices">
+                            <div><small>32cm</small><strong>21.50</strong></div>
+                            <div><small>42cm</small><strong>24.50</strong></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <span class="number">10.</span>
+                            <div>
+                                <h4>BEMOL SPECIAL</h4>
+                                <p>
+                                    Sos pomidorowy, mozzarella, szynka, salami, pieczarki,
+                                    papryka
+                                </p>
+                            </div>
+                        </div>
+                        <div class="prices">
+                            <div><small>32cm</small><strong>23.00</strong></div>
+                            <div><small>42cm</small><strong>26.00</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <h3>Pizze klasyczne</h3>
-            <ul>
-                <li>
-                    <strong>Margherita</strong> – 32 zł
-                    <p>Sos pomidorowy, mozzarella fior di latte, świeża bazylia, oliwa extra vergine.</p>
-                </li>
-                <li>
-                    <strong>Diavola</strong> – 42 zł
-                    <p>Sos pomidorowy, mozzarella, salami piccante, papryczki chili.</p>
-                </li>
-                <li>
-                    <strong>Quattro Formaggi</strong> – 46 zł
-                    <p>Cztery rodzaje serów: mozzarella, gorgonzola, provolone, parmigiano.</p>
-                </li>
-            </ul>
+            <div class="category">
+                <h3>🍝 Pasta</h3>
+                <div class="items">
+                    <div class="item pasta">
+                        <div>
+                            <h4>SPAGHETTI CARBONARA</h4>
+                            <p>Spaghetti, boczek, śmietana, parmezan, jajko</p>
+                        </div>
+                        <strong>22.00 zł</strong>
+                    </div>
+                    <div class="item pasta">
+                        <div>
+                            <h4>PENNE ARRABIATA</h4>
+                            <p>Penne, sos pomidorowy, czosnek, papryczka chili</p>
+                        </div>
+                        <strong>20.00 zł</strong>
+                    </div>
+                    <div class="item pasta">
+                        <div>
+                            <h4>TAGLIATELLE Z KURCZAKIEM</h4>
+                            <p>Tagliatelle, kurczak, śmietana, pieczarki, parmezan</p>
+                        </div>
+                        <strong>24.00 zł</strong>
+                    </div>
+                    <div class="item pasta">
+                        <div>
+                            <h4>LASAGNE BOLOGNESE</h4>
+                            <p>Mięso wołowe, sos pomidorowy, bechamel, parmezan</p>
+                        </div>
+                        <strong>26.00 zł</strong>
+                    </div>
+                </div>
+            </div>
 
-            <h3>Pizze premium</h3>
-            <ul>
-                <li>
-                    <strong>Bemol Signature</strong> – 64 zł
-                    <p>Krem truflowy, mozzarella bawola, prosciutto crudo, rukola, płatki parmezanu.</p>
-                </li>
-                <li>
-                    <strong>Tartufo Bianco</strong> – 58 zł
-                    <p>Biały sos truflowy, mozzarella, pieczarki portobello, tymianek.</p>
-                </li>
-            </ul>
+            <div class="category">
+                <h3>🥤 Napoje</h3>
+                <div class="items drinks">
+                    <div class="item drink">
+                        <p>Coca-Cola 0.5L</p>
+                        <strong>8.00 zł</strong>
+                    </div>
+                    <div class="item drink">
+                        <p>Sprite 0.5L</p>
+                        <strong>8.00 zł</strong>
+                    </div>
+                    <div class="item drink">
+                        <p>Fanta 0.5L</p>
+                        <strong>8.00 zł</strong>
+                    </div>
+                    <div class="item drink">
+                        <p>Woda mineralna 0.5L</p>
+                        <strong>6.00 zł</strong>
+                    </div>
+                    <div class="item drink">
+                        <p>Sok pomarańczowy 0.3L</p>
+                        <strong>7.00 zł</strong>
+                    </div>
+                    <div class="item drink">
+                        <p>Sok jabłkowy 0.3L</p>
+                        <strong>7.00 zł</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <h3>Antipasti</h3>
-            <ul>
-                <li><strong>Bruschetta al pomodoro</strong> – 18 zł</li>
-                <li><strong>Talerz wędlin włoskich</strong> – 38 zł</li>
-                <li><strong>Burrata z pomidorami</strong> – 32 zł</li>
-            </ul>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>O nas</h2>
+            <div class="content">
+                <p>
+                    Pizzeria Bemol to miejsce, gdzie tradycja spotyka się z nowoczesnym
+                    podejściem do gastronomii. Znajdujemy się w sercu Kartuz przy ulicy
+                    Kościuszki 19.
+                </p>
+                <p>
+                    Nasze pizze przygotowujemy z najwyższej jakości składników, a ciasto
+                    wyrabiamy codziennie świeżo. Każda pizza jest pieczona w tradycyjnym
+                    piecu, co nadaje jej wyjątkowego smaku i aromatu.
+                </p>
+                <p>
+                    Oferujemy szeroki wybór pizz, past oraz napojów. Zapraszamy do
+                    zamawiania online lub odwiedzenia naszego lokalu!
+                </p>
+            </div>
+        </div>
+    </section>
 
-            <h3>Desery</h3>
-            <ul>
-                <li><strong>Tiramisu</strong> – 22 zł</li>
-                <li><strong>Panna cotta</strong> – 20 zł</li>
-                <li><strong>Gelato (3 gałki)</strong> – 18 zł</li>
-            </ul>
-
-            <h3>Napoje</h3>
-            <ul>
-                <li><strong>Woda mineralna 0,5 l</strong> – 8 zł</li>
-                <li><strong>Lemoniada domowa</strong> – 14 zł</li>
-                <li><strong>Wino do kieliszka</strong> – 22 zł</li>
-            </ul>
-        </section>
-
-        <!-- GALERIA -->
-        <section id="galeria">
-            <h2>Galeria</h2>
-            <img src="galeria-pizza.jpg" alt="Pizza z pieca opałowego" />
-            <img src="galeria-wnetrze.jpg" alt="Wnętrze restauracji" />
-            <img src="galeria-kuchnia.jpg" alt="Otwarta kuchnia" />
-            <img src="galeria-skladniki.jpg" alt="Świeże składniki" />
-            <img src="galeria-taras.jpg" alt="Taras letni" />
-        </section>
-
-        <!-- REZERWACJA -->
-        <section id="rezerwacja">
-            <h2>Rezerwacja stolika</h2>
-            <form action="/rezerwacja" method="POST">
-                <label for="imie">Imię i nazwisko</label>
-                <input type="text" id="imie" name="imie" placeholder="Jan Kowalski" required />
-
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="jan@email.pl" required />
-
-                <label for="tel">Telefon</label>
-                <input type="tel" id="tel" name="tel" placeholder="+48 000 000 000" required />
-
-                <label for="data">Data</label>
-                <input type="date" id="data" name="data" required />
-
-                <label for="godzina">Godzina</label>
-                <input type="time" id="godzina" name="godzina" required />
-
-                <label for="osoby">Liczba osób</label>
-                <select id="osoby" name="osoby">
-                    <option value="1">1 osoba</option>
-                    <option value="2">2 osoby</option>
-                    <option value="3">3–4 osoby</option>
-                    <option value="5">5–6 osób</option>
-                    <option value="7">7+ osób</option>
-                </select>
-
-                <label for="uwagi">Uwagi (opcjonalnie)</label>
-                <textarea id="uwagi" name="uwagi" placeholder="Alergie, okazje specjalne..."></textarea>
-
-                <button type="submit">Zarezerwuj stolik</button>
-            </form>
-        </section>
-
-        <!-- KONTAKT -->
-        <section id="kontakt">
+    <section id="contact" class="contact">
+        <div class="container">
             <h2>Kontakt</h2>
+            <div class="info-cards">
+                <div class="card">
+                    <h3>📍 Adres</h3>
+                    <p>Pizzeria Bemol</p>
+                    <p>ul. Kościuszki 19</p>
+                    <p>83-300 Kartuzy</p>
+                </div>
+                <div class="card">
+                    <h3>🕐 Godziny otwarcia</h3>
+                    <p>Pn-Pt: 12:00 - 22:00</p>
+                    <p>Sobota: 12:00 - 23:00</p>
+                    <p>Niedziela: 13:00 - 21:00</p>
+                </div>
+            </div>
+            <div class="form-wrapper">
+                <h3>📞 Formularz Kontaktowy</h3>
+                <form>
+                    <input type="text" placeholder="Imię i nazwisko" />
+                    <input type="email" placeholder="Email" />
+                    <textarea rows="5" placeholder="Wiadomość"></textarea>
+                    <button type="submit">Wyślij wiadomość</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-            <h3>Adres</h3>
-            <address>
-
-
-            </address>
-
-            <h3>Godziny otwarcia</h3>
-            <p>Poniedziałek – Czwartek: 12:00 – 22:00</p>
-            <p>Piątek – Sobota: 12:00 – 23:30</p>
-            <p>Niedziela: 13:00 – 21:00</p>
-
-            <h3>Dane kontaktowe</h3>
-            <p>Telefon: <a href="tel:+48581234567">+48 58 123 45 67</a></p>
-            <p>E-mail: <a href="mailto:kontakt@bemol.pl">kontakt@bemol.pl</a></p>
-            <p>Instagram: <a href="https://instagram.com/pizzeria.bemol" target="_blank">@pizzeria.bemol</a></p>
-        </section>
-
-    </main>
-
-    <!-- STOPKA -->
     <footer>
-        <p>© 2025 Pizzeria Bemol. Wszelkie prawa zastrzeżone.</p>
+        <div class="container">
+            <div class="logo-icon">🍕</div>
+            <h3>Pizzeria Bemol</h3>
+            <p>© 2026 Pizzeria Bemol - Wszystkie prawa zastrzeżone</p>
+            <p class="address">📍 Kościuszki 19, 83-300 Kartuzy</p>
+            <div class="social">
+                <a href="#">📘</a>
+                <a href="#">📷</a>
+                <a href="#">🐦</a>
+            </div>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
