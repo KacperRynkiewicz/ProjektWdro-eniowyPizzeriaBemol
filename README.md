@@ -4,6 +4,8 @@ Kacper Rynkiewicz 81453
 Mateusz Tołodziecki 78665
 Rafał Bojarski 78210
 
+*** [Projekt w Figmie] (https://www.figma.com/design/5CDOpO4ommbXIsOiqtH8gg/Design-Strony-Internetowej-restauracji-Bemol?node-id=0-1&p=f&t=7hAJ9gdN4jJFyApH-0)
+
 Dokumentacja Projektu: Responsywna Platforma Internetowa restauracji oparta na React.js i Node.js z Interaktywnym Menu, Systemem Zamówień Online oraz Panelem Administracyjnym
 1. Cel Projektu 
 Stworzenie nowoczesnej, responsywnej witryny internetowej dla Pizzerii Bemol, umożliwiającej przeglądanie menu, składanie zamówień online oraz budowanie wizerunku marki poprzez integrację z mediami społecznościowymi. 
