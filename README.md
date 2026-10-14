@@ -4,7 +4,7 @@ Kacper Rynkiewicz 81453
 Mateusz Tołodziecki 78665
 Rafał Bojarski 78210
 
-*** [Projekt w Figmie] (https://www.figma.com/design/5CDOpO4ommbXIsOiqtH8gg/Design-Strony-Internetowej-restauracji-Bemol?node-id=0-1&p=f&t=7hAJ9gdN4jJFyApH-0)
+*** [Projekt w Figmie] (https://www.figma.com/design/LELbMV7Jcc9r3hWJ3tZI96/Untitled?node-id=0-1&t=y4DeNav8WFrnI92P-1)
 
 Dokumentacja Projektu: Responsywna Platforma Internetowa restauracji oparta na React.js i Node.js z Interaktywnym Menu, Systemem Zamówień Online oraz Panelem Administracyjnym
 1. Cel Projektu 
