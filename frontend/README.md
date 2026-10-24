@@ -30,7 +30,7 @@ public/
   images/               obrazy używane bezpośrednio jako zasoby publiczne
 src/
   assets/               grafiki i fonty importowane przez kod
-  components/           współdzielone komponenty UI
+  components/           komponenty UI, każdy we własnym katalogu
   pages/                strony aplikacji
   layouts/              wspólne układy stron
   hooks/                własne hooki React
@@ -46,6 +46,21 @@ Katalog `backend/` jest opisany w głównym README jako część docelowej
 architektury, ale nie jest tworzony w ramach prac frontendowych.
 
 ## Styling conventions
+
+Each component has its own directory. Keep its implementation and component-specific
+styles together, for example:
+
+```text
+components/
+  Header/
+    Header.tsx
+  CartDrawer/
+    CartDrawer.tsx
+    CartDrawer.css
+```
+
+Import components explicitly, e.g. `../components/Header/Header`. Shared images,
+types, data and state stay in `assets/`, `types/`, `data/` and `context/`.
 
 Use Tailwind utility classes directly in JSX. Do not wrap utility classes in
 BEM selectors or use @apply.

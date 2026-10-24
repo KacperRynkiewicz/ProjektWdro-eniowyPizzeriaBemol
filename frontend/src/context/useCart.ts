@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react'
-import type { Pizza } from '../components/PizzaCard'
+import type { Pizza } from '../components/PizzaCard/PizzaCard'
 
 interface CartContextValue {
   items: { product: Pizza; quantity: number }[]

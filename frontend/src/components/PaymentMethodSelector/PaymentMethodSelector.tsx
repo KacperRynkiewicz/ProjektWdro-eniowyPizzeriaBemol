@@ -1,4 +1,4 @@
-import type { PaymentMethod } from '../types/checkout'
+import type { PaymentMethod } from '../../types/checkout'
 
 interface PaymentMethodSelectorProps {
   value: PaymentMethod

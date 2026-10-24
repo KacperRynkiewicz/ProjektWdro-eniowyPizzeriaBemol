@@ -1,4 +1,4 @@
-import type { CheckoutContactData } from '../types/checkout'
+import type { CheckoutContactData } from '../../types/checkout'
 
 interface CheckoutContactFieldsProps {
   value: CheckoutContactData

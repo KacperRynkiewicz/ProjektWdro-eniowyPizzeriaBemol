@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import PizzaCard from './PizzaCard'
-import { pizzas, categories, type MenuCategory } from '../data/menu'
+import PizzaCard from '../PizzaCard/PizzaCard'
+import { pizzas, categories, type MenuCategory } from '../../data/menu'
 
 function MenuSection() {
   const [activeCategory, setActiveCategory] = useState<MenuCategory>('Pizza')

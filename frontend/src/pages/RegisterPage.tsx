@@ -1,5 +1,5 @@
 import pizzaImage from '../assets/burrata.jpg'
-import RegisterForm from '../components/RegisterForm'
+import RegisterForm from '../components/RegisterForm/RegisterForm'
 
 function RegisterPage() {
   return (

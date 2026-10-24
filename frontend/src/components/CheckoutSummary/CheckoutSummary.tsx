@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { useCart } from '../context/useCart'
-import type { FulfillmentMethod } from '../types/checkout'
+import { useCart } from '../../context/useCart'
+import type { FulfillmentMethod } from '../../types/checkout'
 
 interface CheckoutSummaryProps {
   fulfillment: FulfillmentMethod

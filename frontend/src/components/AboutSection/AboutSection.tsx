@@ -1,4 +1,4 @@
-import pizzaOven from '../assets/pizza-oven.jpg'
+import pizzaOven from '../../assets/pizza-oven.jpg'
 
 const features = [
   'Ciasto dojrzewa 48h',

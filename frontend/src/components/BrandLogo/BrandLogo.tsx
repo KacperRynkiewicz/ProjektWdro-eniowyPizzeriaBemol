@@ -1,5 +1,5 @@
-import logoMark from '../assets/logo-mark.svg'
-import logoMarkDark from '../assets/logo-mark-dark.svg'
+import logoMark from '../../assets/logo-mark.svg'
+import logoMarkDark from '../../assets/logo-mark-dark.svg'
 import { Link } from 'react-router-dom'
 
 interface BrandLogoProps {

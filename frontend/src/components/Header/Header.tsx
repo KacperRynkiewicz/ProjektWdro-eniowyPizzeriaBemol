@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import BrandLogo from './BrandLogo'
-import { useCart } from '../context/useCart'
+import BrandLogo from '../BrandLogo/BrandLogo'
+import { useCart } from '../../context/useCart'
 
 const navigationLinks = [
   { label: 'Start', href: '/' },

@@ -1,4 +1,4 @@
-import { useCart } from '../context/useCart'
+import { useCart } from '../../context/useCart'
 export interface Pizza {
   name: string
   badge: string

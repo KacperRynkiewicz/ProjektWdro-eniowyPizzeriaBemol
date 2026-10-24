@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { useCart } from '../context/useCart'
+import { useCart } from '../../context/useCart'
 import './CartDrawer.css'
 
 const currency = new Intl.NumberFormat('pl-PL', { style: 'currency', currency: 'PLN' })

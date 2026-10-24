@@ -1,4 +1,4 @@
-import type { Pizza } from '../components/PizzaCard'
+import type { Pizza } from '../components/PizzaCard/PizzaCard'
 import diavola from '../assets/diavola.jpg'
 import burrata from '../assets/burrata.jpg'
 import prosciutto from '../assets/prosciutto.jpg'

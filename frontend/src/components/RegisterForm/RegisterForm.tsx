@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
-import type { RegistrationData } from '../types/auth'
+import type { RegistrationData } from '../../types/auth'
 
 function RegisterForm() {
   const [values, setValues] = useState<RegistrationData>({ name: '', email: '', password: '' })

@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom'
-import Header from '../components/Header'
-import PageFooter from '../components/PageFooter'
+import Header from '../components/Header/Header'
+import PageFooter from '../components/PageFooter/PageFooter'
 
 function PageLayout() {
   return (

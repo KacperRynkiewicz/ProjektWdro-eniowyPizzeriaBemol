@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
-import type { LoginData } from '../types/auth'
+import type { LoginData } from '../../types/auth'
 
 function LoginForm() {
   const [values, setValues] = useState<LoginData>({ email: '', password: '' })

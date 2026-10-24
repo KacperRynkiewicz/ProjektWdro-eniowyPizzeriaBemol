@@ -1,4 +1,4 @@
-import type { FulfillmentMethod } from '../types/checkout'
+import type { FulfillmentMethod } from '../../types/checkout'
 
 interface FulfillmentSelectorProps {
   value: FulfillmentMethod

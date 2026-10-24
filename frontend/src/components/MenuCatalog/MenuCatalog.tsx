@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { useCart } from '../context/useCart'
-import type { Pizza } from './PizzaCard'
-import { pizzas, categories, type MenuCategory } from '../data/menu'
+import { useCart } from '../../context/useCart'
+import type { Pizza } from '../PizzaCard/PizzaCard'
+import { pizzas, categories, type MenuCategory } from '../../data/menu'
 
 function CatalogCard({ pizza }: { pizza: Pizza }) {
   const { addItem } = useCart()

@@ -1,11 +1,11 @@
 import './HomePage.css'
-import Header from '../components/Header'
-import HeroContent from '../components/HeroContent'
+import Header from '../components/Header/Header'
+import HeroContent from '../components/HeroContent/HeroContent'
 import heroPizza from '../assets/hero-pizza.jpg'
-import MenuSection from '../components/MenuSection'
-import AboutSection from '../components/AboutSection'
-import DeliverySection from '../components/DeliverySection'
-import Footer from '../components/Footer'
+import MenuSection from '../components/MenuSection/MenuSection'
+import AboutSection from '../components/AboutSection/AboutSection'
+import DeliverySection from '../components/DeliverySection/DeliverySection'
+import Footer from '../components/Footer/Footer'
 
 function HomePage() {
   return (

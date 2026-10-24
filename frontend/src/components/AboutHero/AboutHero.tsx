@@ -1,4 +1,4 @@
-import restaurantInterior from '../assets/restaurant-interior.jpg'
+import restaurantInterior from '../../assets/restaurant-interior.jpg'
 
 function AboutHero() {
   return (

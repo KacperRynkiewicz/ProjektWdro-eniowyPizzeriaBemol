@@ -1,5 +1,5 @@
-import MenuHero from '../components/MenuHero'
-import MenuCatalog from '../components/MenuCatalog'
+import MenuHero from '../components/MenuHero/MenuHero'
+import MenuCatalog from '../components/MenuCatalog/MenuCatalog'
 
 function MenuPage() {
   return (

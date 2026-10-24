@@ -1,6 +1,6 @@
-import AboutHero from '../components/AboutHero'
-import AboutStats from '../components/AboutStats'
-import AboutPhilosophy from '../components/AboutPhilosophy'
+import AboutHero from '../components/AboutHero/AboutHero'
+import AboutStats from '../components/AboutStats/AboutStats'
+import AboutPhilosophy from '../components/AboutPhilosophy/AboutPhilosophy'
 
 function AboutPage() {
   return (

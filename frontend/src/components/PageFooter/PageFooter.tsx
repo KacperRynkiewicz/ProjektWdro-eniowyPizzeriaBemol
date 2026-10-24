@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import BrandLogo from './BrandLogo'
+import BrandLogo from '../BrandLogo/BrandLogo'
 
 const currentYear = new Date().getFullYear()
 

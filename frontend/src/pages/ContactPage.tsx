@@ -1,6 +1,6 @@
-import ContactHero from '../components/ContactHero'
-import ContactDetails from '../components/ContactDetails'
-import ContactForm from '../components/ContactForm'
+import ContactHero from '../components/ContactHero/ContactHero'
+import ContactDetails from '../components/ContactDetails/ContactDetails'
+import ContactForm from '../components/ContactForm/ContactForm'
 
 function ContactPage() {
   return (
