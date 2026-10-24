@@ -1,0 +1,22 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 100vh;
+  padding-inline: 1.5rem;
+  text-align: center;
+}
+
+.not-found__title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+
+.not-found__link {
+  color: oklch(53.2% 0.157 131.589);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

@@ -1,5 +1,6 @@
+import './Header.css'
 import { useState } from 'react'
-import logoMark from '../assets/logo-mark.svg'
+import BrandLogo from './BrandLogo'
 
 const navigationLinks = [
   { label: 'Start', href: '#start' },
@@ -7,29 +8,6 @@ const navigationLinks = [
   { label: 'O nas', href: '#o-nas' },
   { label: 'Kontakt', href: '#kontakt' },
 ]
-
-function BrandLogo() {
-  return (
-    <a
-      aria-label="Bemol Pizzeria — strona główna"
-      className="flex shrink-0 items-center gap-2.5 text-white"
-      href="#start"
-    >
-      <img
-        aria-hidden="true"
-        alt=""
-        className="h-10 w-10"
-        src={logoMark}
-      />
-      <span className="flex flex-col leading-none">
-        <span className="text-lg font-extrabold tracking-wide">BEMOL</span>
-        <span className="mt-1 text-[0.55rem] font-semibold tracking-[0.24em]">
-          PIZZERIA
-        </span>
-      </span>
-    </a>
-  )
-}
 
 function AccountIcon() {
   return (
@@ -68,16 +46,16 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="relative z-10 w-full px-5 py-4 text-white sm:px-8 lg:px-10">
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between">
+    <header className="site-header">
+      <div className="site-header__container">
         <BrandLogo />
 
-        <nav aria-label="Główna nawigacja" className="hidden md:block">
-          <ul className="flex items-center gap-8 lg:gap-10">
+        <nav aria-label="Główna nawigacja" className="site-header__nav">
+          <ul className="site-header__links">
             {navigationLinks.map(({ label, href }) => (
               <li key={label}>
                 <a
-                  className="text-xs font-semibold tracking-[0.18em] transition-colors hover:text-[#D6FA62] lg:text-sm"
+                  className="site-header__link"
                   href={href}
                 >
                   {label}
@@ -87,21 +65,21 @@ function Header() {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="site-header__actions">
           <button
             aria-label="Profil użytkownika"
-            className="hidden h-11 w-11 items-center justify-center rounded-full border border-white/80 transition-colors hover:border-[#D6FA62] hover:text-[#D6FA62] sm:flex"
+            className="site-header__button site-header__button--account"
             type="button"
           >
-            <span className="h-5 w-5">
+            <span className="site-header__icon">
               <AccountIcon />
             </span>
           </button>
           <button
-            className="flex h-11 items-center gap-2 rounded-full border border-white/80 px-3 text-xs font-medium transition-colors hover:border-[#D6FA62] hover:text-[#D6FA62] sm:px-4"
+            className="site-header__button site-header__button--cart"
             type="button"
           >
-            <span aria-hidden="true" className="h-[18px] w-[18px]">
+            <span aria-hidden="true" className="site-header__icon site-header__icon--bag">
               <BagIcon />
             </span>
             Koszyk
@@ -109,11 +87,11 @@ function Header() {
           <button
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? 'Zamknij menu' : 'Otwórz menu'}
-            className="ml-1 flex h-11 w-11 items-center justify-center rounded-full border border-white/80 md:hidden"
+            className="site-header__button site-header__button--toggle"
             onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
             type="button"
           >
-            <span aria-hidden="true" className="text-xl leading-none">
+            <span aria-hidden="true" className="site-header__toggle-symbol">
               {isMenuOpen ? '×' : '☰'}
             </span>
           </button>
@@ -123,13 +101,13 @@ function Header() {
       {isMenuOpen && (
         <nav
           aria-label="Główna nawigacja"
-          className="absolute inset-x-0 top-full border-b border-white/10 bg-[#192019]/95 px-5 py-4 backdrop-blur md:hidden"
+          className="site-header__mobile-nav"
         >
-          <ul className="mx-auto flex max-w-[1440px] flex-col">
+          <ul className="site-header__mobile-links">
             {navigationLinks.map(({ label, href }) => (
               <li key={label}>
                 <a
-                  className="block py-3 text-sm font-semibold tracking-[0.16em] hover:text-[#D6FA62]"
+                  className="site-header__mobile-link"
                   href={href}
                   onClick={() => setIsMenuOpen(false)}
                 >
