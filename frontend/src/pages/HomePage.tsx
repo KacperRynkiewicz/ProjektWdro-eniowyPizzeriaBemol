@@ -6,18 +6,18 @@ import MenuSection from '../components/MenuSection'
 
 function HomePage() {
   return (
-    <main className="home-page">
-      <section className="home-hero" id="start">
+    <main className="min-h-screen bg-dark text-white">
+      <section className="relative isolate min-h-screen" id="start">
         <img
           alt=""
           aria-hidden="true"
-          className="home-hero__image"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-[60%_center] sm:object-[65%_center]"
           fetchPriority="high"
           height={850}
           src={heroPizza}
           width={1042}
         />
-        <div aria-hidden="true" className="home-hero__shade" />
+        <div aria-hidden="true" className="hero-shade absolute inset-0 -z-10" />
         <Header />
         <HeroContent />
       </section>

@@ -45,42 +45,14 @@ src/
 Katalog `backend/` jest opisany w głównym README jako część docelowej
 architektury, ale nie jest tworzony w ramach prac frontendowych.
 
-## Konwencja stylów
+## Styling conventions
 
-Komponenty używają Tailwind CSS i nazw BEM. Plik stylów znajduje się obok
-komponentu i jest importowany bezpośrednio przez niego, np. `PizzaCard.tsx`
-oraz `PizzaCard.css`.
+Use Tailwind utility classes directly in JSX. Do not wrap utility classes in
+BEM selectors or use @apply.
 
-- Blok opisuje komponent: `pizza-card`, `site-header`, `menu-section`.
-- Element opisuje jego część: `pizza-card__price`, `site-header__link`.
-- Modyfikator opisuje wariant: `menu-section__category--active`.
-  Zawsze występuje razem z klasą bazową elementu.
-- Stany interakcji opisujemy przez `:hover`, `:focus-visible` i `:disabled`.
-- Media queries umieszczamy w pliku danego komponentu, od najmniejszych ekranów.
-
-W JSX stosujemy czytelne nazwy BEM. W plikach CSS składamy style z narzędzi
-Tailwind przez `@apply`. Każdy plik komponentu zaczyna się od
-`@reference "../index.css"`, aby korzystać ze wspólnej konfiguracji bez
-powielania resetu Preflight. Własny CSS zostawiamy dla nietypowych efektów,
-takich jak wielowarstwowe gradienty.
-
-```css
-@reference "../index.css";
-
-.menu-section__container {
-  @apply mx-auto max-w-(--container-width);
-}
-
-.menu-section__category--active {
-  @apply bg-surface-dark text-white;
-}
-```
-
-`src/index.css` zawiera globalne ustawienia i motyw Tailwind (`@theme`): kolory
-oraz font nagłówków. Dzięki temu używamy nazw takich jak `bg-cream`,
-`text-surface-dark` i `font-display` zamiast powtarzać wartości kolorów i fontów.
-Szerokość kontenera i responsywne odstępy pozostają wspólnymi zmiennymi CSS.
-
-`MenuSection` odpowiada za układ sekcji, a `PizzaCard` za prezentację pojedynczej
-pizzy. `BrandLogo` jest osobnym komponentem, który można wykorzystać także
-w stopce. Nowe sekcje rozwijamy według tego samego podziału odpowiedzialności.
+- Use responsive and state variants: sm:, md:, lg:, hover: and disabled:.
+- Keep complete class names so Tailwind can detect them during builds.
+- Extract repeated UI into components such as PizzaCard and BrandLogo.
+- Keep the shared Tailwind theme and global defaults in src/index.css.
+- Reserve custom CSS for complex effects, such as the layered gradients
+  in HomePage.css.
