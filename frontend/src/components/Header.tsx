@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import BrandLogo from './BrandLogo'
 import { useCart } from '../context/useCart'
 
@@ -101,15 +101,15 @@ function Header({ variant = 'dark' }: HeaderProps) {
         </nav>
 
         <div className="flex items-center gap-2">
-          <button
+          <Link
             aria-label="Profil użytkownika"
             className={`hidden h-11 w-11 items-center justify-center rounded-full border transition-colors sm:flex ${buttonBorder}`}
-            type="button"
+            to="/logowanie"
           >
             <span className="h-5 w-5">
               <AccountIcon />
             </span>
-          </button>
+          </Link>
           <button
             className={`flex h-11 items-center gap-2 rounded-full border px-3 text-xs font-medium transition-colors sm:px-4 ${isLight ? 'border-surface-dark bg-surface-dark text-white hover:bg-dark' : buttonBorder}`}
             aria-haspopup="dialog"
