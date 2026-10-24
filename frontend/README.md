@@ -44,3 +44,15 @@ src/
 
 Katalog `backend/` jest opisany w głównym README jako część docelowej
 architektury, ale nie jest tworzony w ramach prac frontendowych.
+
+## Styling conventions
+
+Use Tailwind utility classes directly in JSX. Do not wrap utility classes in
+BEM selectors or use @apply.
+
+- Use responsive and state variants: sm:, md:, lg:, hover: and disabled:.
+- Keep complete class names so Tailwind can detect them during builds.
+- Extract repeated UI into components such as PizzaCard and BrandLogo.
+- Keep the shared Tailwind theme and global defaults in src/index.css.
+- Reserve custom CSS for complex effects, such as the layered gradients
+  in HomePage.css.

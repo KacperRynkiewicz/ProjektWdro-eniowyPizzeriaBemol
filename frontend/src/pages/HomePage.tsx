@@ -1,17 +1,36 @@
+import './HomePage.css'
+import Header from '../components/Header'
+import HeroContent from '../components/HeroContent'
+import heroPizza from '../assets/hero-pizza.jpg'
+import MenuSection from '../components/MenuSection'
+import AboutSection from '../components/AboutSection'
+import DeliverySection from '../components/DeliverySection'
+import Footer from '../components/Footer'
+
 function HomePage() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[#192019] px-6 text-center text-white">
-      <div className="max-w-xl">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-lime-300">
-          Pizzeria Bemol · Kartuzy
-        </p>
-        <h1 className="text-3xl font-bold sm:text-5xl">Strona główna</h1>
-        <p className="mt-4 text-base leading-7 text-white/70">
-          Przygotowanie strony na podstawie projektu Figma rozpoczniemy w
-          kolejnym etapie.
-        </p>
-      </div>
-    </main>
+    <>
+      <main className="min-h-screen bg-dark text-white">
+        <section className="relative isolate min-h-screen" id="start">
+          <img
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 -z-20 h-full w-full object-cover object-[60%_center] sm:object-[65%_center]"
+            fetchPriority="high"
+            height={850}
+            src={heroPizza}
+            width={1042}
+          />
+          <div aria-hidden="true" className="hero-shade absolute inset-0 -z-10" />
+          <Header />
+          <HeroContent />
+        </section>
+        <MenuSection />
+        <AboutSection />
+        <DeliverySection />
+      </main>
+      <Footer />
+    </>
   )
 }
 
