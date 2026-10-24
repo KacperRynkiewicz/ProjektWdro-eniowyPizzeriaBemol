@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import HeroContent from '../components/HeroContent'
 import heroPizza from '../assets/hero-pizza.jpg'
 import MenuSection from '../components/MenuSection'
+import AboutSection from '../components/AboutSection'
 
 function HomePage() {
   return (
@@ -22,6 +23,7 @@ function HomePage() {
         <HeroContent />
       </section>
       <MenuSection />
+      <AboutSection />
     </main>
   )
 }
