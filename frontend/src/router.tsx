@@ -9,6 +9,7 @@ import AppLayout from './layouts/AppLayout'
 import CartPage from './pages/CartPage'
 import RegisterPage from './pages/RegisterPage'
 import LoginPage from './pages/LoginPage'
+import CheckoutPage from './pages/CheckoutPage'
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
       {
         element: <PageLayout />,
         children: [
+          {
+            path: '/zamowienie',
+            element: <CheckoutPage />,
+          },
           {
             path: '/logowanie',
             element: <LoginPage />,

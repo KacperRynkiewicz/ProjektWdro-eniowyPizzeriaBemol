@@ -65,7 +65,7 @@ function CartPage() {
               <span>Suma produktów</span><span className="tabular-nums">{currency.format(cart.total)}</span>
             </p>
             <p className="mt-3 text-xs leading-relaxed text-white/60">Koszt dostawy i opakowania nie jest wliczony.</p>
-            <p className="mt-6 text-sm leading-relaxed text-white/70">Składanie zamówień online będzie dostępne wkrótce.</p>
+            <Link className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-lime px-6 text-center text-sm uppercase tracking-[0.12em] text-surface-dark hover:bg-cream" to="/zamowienie">Przejdź do zamówienia</Link>
             <Link className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-lime px-6 text-center text-sm uppercase tracking-[0.12em] text-surface-dark hover:bg-cream" to="/menu">Kontynuuj zakupy</Link>
           </aside>
         </div>
