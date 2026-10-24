@@ -1,112 +1,53 @@
+@reference "../index.css";
+
 .pizza-card {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  border-radius: 1.75rem;
-  background: var(--color-white);
-  box-shadow: 0 12px 32px rgb(29 38 27 / 6%);
+  @apply flex flex-col overflow-hidden rounded-[1.75rem] bg-white shadow-[0_12px_32px_rgb(29_38_27_/_0.06)];
 }
 
 .pizza-card__media {
-  position: relative;
-  aspect-ratio: 0.88;
-  overflow: hidden;
+  @apply relative aspect-[0.88] overflow-hidden;
 }
 
 .pizza-card__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  @apply w-full h-full object-cover;
 }
 
 .pizza-card__badge {
-  position: absolute;
-  top: 1.25rem;
-  left: 1.25rem;
-  padding: 0.5rem 0.75rem;
-  border-radius: 9999px;
-  background: var(--color-cream);
-  font-size: 0.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  @apply absolute top-5 left-5 py-2 px-3 rounded-full bg-cream text-[0.6rem] font-bold uppercase tracking-[0.1em];
 }
 
 .pizza-card__price {
-  position: absolute;
-  right: 1.25rem;
-  bottom: 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  transform: rotate(-12deg);
-  background: var(--color-lime);
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  @apply absolute right-5 bottom-5 flex items-center justify-center w-16 h-16 rounded-full -rotate-12 bg-lime font-display text-[1.25rem] leading-[1.75rem];
 }
 
 .pizza-card__body {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  padding: 1.5rem;
+  @apply flex flex-1 flex-col p-6;
 }
 
 .pizza-card__heading {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  @apply flex items-center gap-3;
 }
 
 .pizza-card__number {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  font-weight: 500;
-  color: #777c70;
+  @apply text-[0.75rem] leading-[1rem] font-medium text-[#777c70];
 }
 
 .pizza-card__name {
-  font-family: var(--font-display);
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  letter-spacing: -0.025em;
+  @apply font-display text-[1.875rem] leading-[2.25rem] tracking-[-0.025em];
 }
 
 .pizza-card__description {
-  margin-top: 0.75rem;
-  margin-bottom: 1.5rem;
-  font-size: 0.875rem;
-  line-height: 1.625;
-  color: var(--color-muted);
+  @apply mt-3 mb-6 text-[0.875rem] leading-relaxed text-muted;
 }
 
 .pizza-card__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  width: 100%;
-  min-height: 3rem;
-  margin-top: auto;
-  padding-inline: 0.75rem;
-  border: 1px solid rgb(29 38 27 / 55%);
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  @apply flex items-center justify-center gap-3 w-full min-h-12 mt-auto px-3 border border-surface-dark/55 rounded-full text-[0.75rem] leading-[1rem] uppercase tracking-[0.12em];
 }
 
 .pizza-card__button:disabled {
-  cursor: not-allowed;
-  color: var(--color-muted);
+  @apply cursor-not-allowed text-muted;
 }
 
 .pizza-card__plus {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  @apply text-[1.125rem] leading-[1.75rem];
 }

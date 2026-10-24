@@ -1,32 +1,21 @@
+@reference "../index.css";
+
 .brand-logo {
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  gap: 0.625rem;
-  color: var(--color-white);
+  @apply flex shrink-0 items-center gap-2.5 text-white;
 }
 
 .brand-logo__mark {
-  width: 2.5rem;
-  height: 2.5rem;
+  @apply w-10 h-10;
 }
 
 .brand-logo__text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
+  @apply flex flex-col leading-none;
 }
 
 .brand-logo__name {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 800;
-  letter-spacing: 0.025em;
+  @apply text-[1.125rem] leading-[1.75rem] font-extrabold tracking-[0.025em];
 }
 
 .brand-logo__tagline {
-  margin-top: 0.25rem;
-  font-size: 0.55rem;
-  font-weight: 600;
-  letter-spacing: 0.24em;
+  @apply mt-1 text-[0.55rem] font-semibold tracking-[0.24em];
 }
