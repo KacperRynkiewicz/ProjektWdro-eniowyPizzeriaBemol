@@ -6,6 +6,7 @@ import PageLayout from './layouts/PageLayout'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import AppLayout from './layouts/AppLayout'
+import CartPage from './pages/CartPage'
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([
       {
         element: <PageLayout />,
         children: [
+          {
+            path: '/koszyk',
+            element: <CartPage />,
+          },
           {
             path: '/kontakt',
             element: <ContactPage />,

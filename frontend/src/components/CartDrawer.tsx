@@ -62,6 +62,7 @@ function CartDrawer() {
           <h3 className="font-display text-3xl uppercase">Jeszcze tu pusto</h3>
           <p className="mt-3 text-sm leading-relaxed text-muted">Dodaj coś pysznego z naszego menu.</p>
           <Link className="mt-7 rounded-full bg-surface-dark px-6 py-4 text-sm uppercase tracking-widest text-white hover:bg-dark" onClick={cart.closeCart} to="/menu">Wybierz pizzę</Link>
+          <Link className="mt-3 inline-flex min-h-11 items-center justify-center px-4 text-xs uppercase tracking-widest underline underline-offset-4 hover:text-orange" onClick={cart.closeCart} to="/koszyk">Przejdź do koszyka</Link>
         </div>
       ) : (
         <>
@@ -92,6 +93,7 @@ function CartDrawer() {
               <span>Suma produktów</span><span className="tabular-nums">{currency.format(cart.total)}</span>
             </p>
             <p className="mt-2 text-xs leading-relaxed text-muted">Koszt dostawy i opakowania nie jest wliczony.</p>
+            <Link className="mt-5 flex min-h-12 w-full items-center justify-center rounded-full bg-lime px-5 text-sm uppercase tracking-widest hover:bg-white" onClick={cart.closeCart} to="/koszyk">Przejdź do koszyka</Link>
             <button className="mt-5 min-h-12 w-full cursor-pointer rounded-full bg-surface-dark px-5 text-sm uppercase tracking-widest text-white hover:bg-dark" onClick={cart.closeCart} type="button">Kontynuuj zakupy</button>
           </div>
         </>
