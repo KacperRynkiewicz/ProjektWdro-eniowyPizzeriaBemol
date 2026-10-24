@@ -51,3 +51,64 @@ Uwaga Techniczna: Strona musi być w pełni zoptymalizowana pod urządzenia mobi
 
 Odbiorca strony: Pizzeria Bemol, Kościuszki 19, 83-300 Kartuzy
 # ProjektWdro-eniowyPizzeriaBemol
+
+## 6. Struktura projektu
+
+Frontend rozwijamy w katalogu `frontend/`. Katalog `backend/` jest częścią
+docelowej architektury, ale będzie tworzony i rozwijany przez pozostałych
+członków zespołu.
+
+```text
+ProjektWdrożeniowyPizzeriaBemol/
+├── frontend/
+│   ├── public/
+│   │   └── images/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── layouts/
+│   │   ├── hooks/
+│   │   ├── context/
+│   │   ├── services/
+│   │   ├── types/
+│   │   ├── App.tsx
+│   │   ├── main.tsx
+│   │   └── router.tsx
+│   ├── package.json
+│   ├── index.html
+│   └── vite.config.ts
+├── backend/                  # planowany; nie jest częścią frontendu
+│   └── src/
+│       ├── controllers/
+│       ├── routes/
+│       ├── models/
+│       ├── middleware/
+│       ├── services/
+│       └── app.ts
+├── .gitignore
+└── README.md
+```
+
+`backend/` jest opisany wyłącznie jako planowana część repozytorium — katalog
+ani jego pliki nie są tworzone w ramach prac frontendowych.
+
+### Odpowiedzialność katalogów frontendu
+
+- `assets/` — zasoby importowane przez kod aplikacji, takie jak grafiki i fonty.
+- `components/` — współdzielone komponenty interfejsu.
+- `pages/` — strony aplikacji, w tym strona główna.
+- `layouts/` — wspólne układy stron.
+- `hooks/` — własne hooki React.
+- `context/` — współdzielony stan udostępniany przez React Context.
+- `services/` — komunikacja z REST API.
+- `types/` — wspólne typy TypeScript.
+- `public/images/` — obrazy używane jako statyczne zasoby.
+
+### Uruchomienie frontendu
+
+```bash
+cd frontend
+npm install
+npm run dev
+```

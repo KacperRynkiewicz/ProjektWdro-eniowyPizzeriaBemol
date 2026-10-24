@@ -27,12 +27,20 @@ npm run build
 
 ```text
 public/
-  images/              obrazy używane bezpośrednio jako zasoby publiczne
+  images/               obrazy używane bezpośrednio jako zasoby publiczne
 src/
-  components/           współdzielone komponenty UI (dodamy po analizie makiety)
+  assets/               grafiki i fonty importowane przez kod
+  components/           współdzielone komponenty UI
   pages/                strony aplikacji
-  App.tsx               konfiguracja dostawcy routingu
-  router.tsx            trasy aplikacji
-  index.css             globalne style i import Tailwind CSS
+  layouts/              wspólne układy stron
+  hooks/                własne hooki React
+  context/              współdzielony stan aplikacji
+  services/             komunikacja z REST API
+  types/                wspólne typy TypeScript
+  App.tsx               główny komponent aplikacji
   main.tsx              punkt wejścia aplikacji
+  router.tsx            trasy aplikacji
 ```
+
+Katalog `backend/` jest opisany w głównym README jako część docelowej
+architektury, ale nie jest tworzony w ramach prac frontendowych.
