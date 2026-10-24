@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom'
 
 interface BrandLogoProps {
   variant?: 'light' | 'dark'
+  compact?: boolean
 }
 
-function BrandLogo({ variant = 'dark' }: BrandLogoProps) {
+function BrandLogo({ variant = 'dark', compact = false }: BrandLogoProps) {
   const isLight = variant === 'light'
 
   return (
@@ -22,8 +23,8 @@ function BrandLogo({ variant = 'dark' }: BrandLogoProps) {
         src={isLight ? logoMarkDark : logoMark}
       />
       <span className="flex flex-col leading-none">
-        <span className={isLight ? 'font-display text-2xl tracking-wide' : 'text-lg font-extrabold tracking-wide'}>BEMOL</span>
-        {!isLight && (
+        <span className={isLight || compact ? 'font-display text-2xl tracking-wide' : 'text-lg font-extrabold tracking-wide'}>BEMOL</span>
+        {!isLight && !compact && (
           <span className="mt-1 text-[0.55rem] font-semibold tracking-[0.24em]">
             PIZZERIA
           </span>
