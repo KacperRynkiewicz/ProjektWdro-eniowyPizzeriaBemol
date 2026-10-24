@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import logoMark from '../assets/logo-mark.svg'
 
 const navigationLinks = [
   { label: 'Start', href: '#start' },
@@ -14,22 +15,12 @@ function BrandLogo() {
       className="flex shrink-0 items-center gap-2.5 text-white"
       href="#start"
     >
-      <svg
+      <img
         aria-hidden="true"
+        alt=""
         className="h-10 w-10"
-        fill="none"
-        viewBox="0 0 40 40"
-      >
-        <circle cx="20" cy="20" r="18" stroke="currentColor" strokeWidth="2" />
-        <path
-          d="M16 10v20m1-19h6a5 5 0 0 1 0 10h-6m0 0h7a5 5 0 0 1 0 10h-7"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2.5"
-        />
-        <circle cx="11" cy="30" r="3" fill="#D6FA62" />
-      </svg>
+        src={logoMark}
+      />
       <span className="flex flex-col leading-none">
         <span className="text-lg font-extrabold tracking-wide">BEMOL</span>
         <span className="mt-1 text-[0.55rem] font-semibold tracking-[0.24em]">
