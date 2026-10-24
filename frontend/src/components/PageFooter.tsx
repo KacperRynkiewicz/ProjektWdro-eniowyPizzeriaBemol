@@ -17,9 +17,9 @@ function PageFooter() {
               </Link>
             </li>
             <li>
-              <a className="inline-flex min-h-11 items-center transition-colors hover:text-lime focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime" href="/#o-nas">
+              <Link className="inline-flex min-h-11 items-center transition-colors hover:text-lime focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime" to="/o-nas">
                 O nas
-              </a>
+              </Link>
             </li>
             <li>
               <a className="inline-flex min-h-11 items-center transition-colors hover:text-lime focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime" href="/#kontakt">
