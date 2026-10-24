@@ -1,6 +1,7 @@
 import Header from '../components/Header'
 import HeroContent from '../components/HeroContent'
 import heroPizza from '../assets/hero-pizza.jpg'
+import MenuSection from '../components/MenuSection'
 
 function HomePage() {
   return (
@@ -19,6 +20,7 @@ function HomePage() {
         <Header />
         <HeroContent />
       </section>
+      <MenuSection />
     </main>
   )
 }
