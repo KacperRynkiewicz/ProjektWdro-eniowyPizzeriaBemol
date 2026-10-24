@@ -5,31 +5,37 @@ import MenuPage from './pages/MenuPage'
 import PageLayout from './layouts/PageLayout'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
+import AppLayout from './layouts/AppLayout'
 
 export const router = createBrowserRouter([
   {
-    path: '/',
-    element: <HomePage />,
-  },
-  {
-    element: <PageLayout />,
+    element: <AppLayout />,
     children: [
       {
-        path: '/kontakt',
-        element: <ContactPage />,
+        path: '/',
+        element: <HomePage />,
       },
       {
-        path: '/o-nas',
-        element: <AboutPage />,
+        element: <PageLayout />,
+        children: [
+          {
+            path: '/kontakt',
+            element: <ContactPage />,
+          },
+          {
+            path: '/o-nas',
+            element: <AboutPage />,
+          },
+          {
+            path: '/menu',
+            element: <MenuPage />,
+          },
+        ],
       },
       {
-        path: '/menu',
-        element: <MenuPage />,
+        path: '*',
+        element: <NotFoundPage />,
       },
     ],
-  },
-  {
-    path: '*',
-    element: <NotFoundPage />,
   },
 ])

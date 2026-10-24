@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import BrandLogo from './BrandLogo'
+import { useCart } from '../context/useCart'
 
 const navigationLinks = [
   { label: 'Start', href: '/' },
@@ -72,6 +73,7 @@ interface HeaderProps {
 }
 
 function Header({ variant = 'dark' }: HeaderProps) {
+  const cart = useCart()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const isLight = variant === 'light'
   const linkColor = isLight ? 'hover:text-orange' : 'hover:text-lime-hover'
@@ -110,12 +112,17 @@ function Header({ variant = 'dark' }: HeaderProps) {
           </button>
           <button
             className={`flex h-11 items-center gap-2 rounded-full border px-3 text-xs font-medium transition-colors sm:px-4 ${isLight ? 'border-surface-dark bg-surface-dark text-white hover:bg-dark' : buttonBorder}`}
+            aria-haspopup="dialog"
+            aria-controls="cart-drawer"
+            aria-label={`Koszyk, liczba produktów: ${cart.count}`}
+            onClick={() => { setIsMenuOpen(false); cart.openCart() }}
             type="button"
           >
             <span aria-hidden="true" className="h-[18px] w-[18px]">
               <BagIcon />
             </span>
             Koszyk
+            {cart.count > 0 && <span className="flex min-h-5 min-w-5 items-center justify-center rounded-full bg-lime px-1 text-[0.65rem] text-surface-dark">{cart.count}</span>}
           </button>
           <button
             aria-expanded={isMenuOpen}

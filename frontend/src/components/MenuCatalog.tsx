@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import { useCart } from '../context/useCart'
 import type { Pizza } from './PizzaCard'
 import { pizzas, categories, type MenuCategory } from '../data/menu'
 
 function CatalogCard({ pizza }: { pizza: Pizza }) {
+  const { addItem } = useCart()
   return (
     <article className="flex flex-col">
       <div className="relative aspect-[1.05] overflow-hidden rounded-3xl">
@@ -24,10 +26,9 @@ function CatalogCard({ pizza }: { pizza: Pizza }) {
       </div>
       <p className="mb-6 mt-3 text-sm leading-relaxed text-muted">{pizza.description}</p>
       <button
-        aria-label={`Dodaj ${pizza.name} do koszyka — wkrótce`}
+        aria-label={`Dodaj ${pizza.name} do koszyka`}
         className="mt-auto flex min-h-11 items-center justify-center gap-3 rounded-full border border-surface-dark px-5 text-sm uppercase tracking-[0.12em] disabled:cursor-not-allowed"
-        disabled
-        title="Zamawianie online będzie dostępne wkrótce"
+        onClick={() => addItem(pizza.name)}
         type="button"
       >
         <span aria-hidden="true" className="text-xl">+</span>

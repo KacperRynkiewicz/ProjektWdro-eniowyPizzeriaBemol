@@ -1,4 +1,4 @@
-
+import { useCart } from '../context/useCart'
 export interface Pizza {
   name: string
   badge: string
@@ -14,6 +14,7 @@ interface PizzaCardProps {
 }
 
 function PizzaCard({ pizza, index }: PizzaCardProps) {
+  const { addItem } = useCart()
   return (
     <article aria-labelledby={`pizza-${index}`} className="flex flex-col overflow-hidden rounded-[1.75rem] bg-white shadow-[0_12px_32px_rgb(29_38_27_/_0.06)]">
       <div className="relative aspect-[0.88] overflow-hidden">
@@ -35,10 +36,9 @@ function PizzaCard({ pizza, index }: PizzaCardProps) {
         </h3>
         <p className="mb-6 mt-3 text-sm leading-relaxed text-[#686C62]">{pizza.description}</p>
         <button
-          aria-label={`Dodaj ${pizza.name} do koszyka — wkrótce`}
+          aria-label={`Dodaj ${pizza.name} do koszyka`}
           className="mt-auto flex min-h-12 w-full items-center justify-center gap-3 rounded-full border border-[#1D261B]/55 px-3 text-xs uppercase tracking-[0.12em] disabled:cursor-not-allowed disabled:text-[#686C62]"
-          disabled
-          title="Zamawianie online będzie dostępne wkrótce"
+          onClick={() => addItem(pizza.name)}
           type="button"
         >
           <span aria-hidden="true" className="text-lg">+</span>
