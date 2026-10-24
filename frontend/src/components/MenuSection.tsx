@@ -1,42 +1,10 @@
 import { useState } from 'react'
-import PizzaCard, { type Pizza } from './PizzaCard'
-import diavola from '../assets/diavola.jpg'
-import burrata from '../assets/burrata.jpg'
-import prosciutto from '../assets/prosciutto.jpg'
-
-const pizzas: Pizza[] = [
-  {
-    name: 'Diavola',
-    badge: 'Ostra',
-    price: 39,
-    image: diavola,
-    imageHeight: 558,
-    description: 'sos pomidorowy, mozzarella fior di latte, spianata piccante, jalapeño',
-  },
-  {
-    name: 'Burrata',
-    badge: 'Bestseller',
-    price: 45,
-    image: burrata,
-    imageHeight: 1220,
-    description: 'sos pomidorowy, mozzarella, burrata, pomidorki cherry, pesto, rukola',
-  },
-  {
-    name: 'Prosciutto',
-    badge: 'Klasyka',
-    price: 43,
-    image: prosciutto,
-    imageHeight: 1350,
-    description: 'sos pomidorowy, mozzarella, prosciutto crudo, grana padano, rukola',
-  },
-]
-
-const categories = ['Pizza', 'Burgery', 'Pasta', 'Sałatki', 'Napoje'] as const
-type MenuCategory = typeof categories[number]
+import PizzaCard from './PizzaCard'
+import { pizzas, categories, type MenuCategory } from '../data/menu'
 
 function MenuSection() {
   const [activeCategory, setActiveCategory] = useState<MenuCategory>('Pizza')
-  const visiblePizzas = activeCategory === 'Pizza' ? pizzas : []
+  const visiblePizzas = activeCategory === 'Pizza' ? pizzas.slice(0, 3) : []
 
   return (
     <section aria-labelledby="menu-heading" className="bg-[#F7F3EA] px-5 py-20 text-[#1D261B] sm:px-8 lg:px-10 lg:py-28" id="menu">
