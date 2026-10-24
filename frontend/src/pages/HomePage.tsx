@@ -1,10 +1,21 @@
 import Header from '../components/Header'
 import HeroContent from '../components/HeroContent'
+import heroPizza from '../assets/hero-pizza.jpg'
 
 function HomePage() {
   return (
-    <main className="min-h-screen bg-[radial-gradient(ellipse_at_80%_45%,rgba(74,82,47,0.2),transparent_50%),linear-gradient(110deg,#111610_0%,#192019_60%,#25291f_100%)] text-white">
-      <section className="min-h-screen" id="start">
+    <main className="min-h-screen bg-[#111610] text-white">
+      <section className="home-hero relative isolate min-h-screen" id="start">
+        <img
+          alt=""
+          aria-hidden="true"
+          className="home-hero__image absolute inset-0 -z-20 h-full w-full object-cover"
+          fetchPriority="high"
+          height={850}
+          src={heroPizza}
+          width={1042}
+        />
+        <div aria-hidden="true" className="home-hero__shade absolute inset-0 -z-10" />
         <Header />
         <HeroContent />
       </section>

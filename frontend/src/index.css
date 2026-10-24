@@ -16,3 +16,25 @@ body {
   min-height: 100vh;
   margin: 0;
 }
+
+.home-hero__image {
+  object-position: 65% center;
+}
+
+.home-hero__shade {
+  background:
+    linear-gradient(180deg, rgb(17 22 16 / 75%) 0%, transparent 24%, transparent 75%, rgb(17 22 16 / 80%) 100%),
+    linear-gradient(90deg, rgb(17 22 16 / 95%) 0%, rgb(17 22 16 / 85%) 35%, rgb(17 22 16 / 50%) 65%, rgb(17 22 16 / 20%) 100%);
+}
+
+@media (max-width: 639px) {
+  .home-hero__image {
+    object-position: 60% center;
+  }
+
+  .home-hero__shade {
+    background:
+      linear-gradient(180deg, rgb(17 22 16 / 65%), rgb(17 22 16 / 35%) 40%, rgb(17 22 16 / 85%)),
+      linear-gradient(90deg, rgb(17 22 16 / 85%), rgb(17 22 16 / 50%));
+  }
+}
