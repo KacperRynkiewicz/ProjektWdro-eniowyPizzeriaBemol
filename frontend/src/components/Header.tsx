@@ -6,7 +6,7 @@ const navigationLinks = [
   { label: 'Start', href: '/' },
   { label: 'Menu', href: '/menu' },
   { label: 'O nas', href: '/o-nas' },
-  { label: 'Kontakt', href: '/#kontakt' },
+  { label: 'Kontakt', href: '/kontakt' },
 ]
 
 interface NavigationLinkProps {

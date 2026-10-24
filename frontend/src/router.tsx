@@ -4,6 +4,7 @@ import NotFoundPage from './pages/NotFoundPage'
 import MenuPage from './pages/MenuPage'
 import PageLayout from './layouts/PageLayout'
 import AboutPage from './pages/AboutPage'
+import ContactPage from './pages/ContactPage'
 
 export const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ export const router = createBrowserRouter([
   {
     element: <PageLayout />,
     children: [
+      {
+        path: '/kontakt',
+        element: <ContactPage />,
+      },
       {
         path: '/o-nas',
         element: <AboutPage />,

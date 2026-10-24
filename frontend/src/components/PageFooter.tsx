@@ -22,9 +22,9 @@ function PageFooter() {
               </Link>
             </li>
             <li>
-              <a className="inline-flex min-h-11 items-center transition-colors hover:text-lime focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime" href="/#kontakt">
+              <Link className="inline-flex min-h-11 items-center transition-colors hover:text-lime focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime" to="/kontakt">
                 Kontakt
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
